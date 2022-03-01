@@ -30,7 +30,8 @@ public class ItreatrString {
                 new Person("ay ", 36),
                 new Person("Vijay ", 25)
         );
-        Data.stream().min(Person::ageDifference).ifPresent(you -> System.out.println("Local Data =" + you));
+        Data.stream().min(Person::ageDifference).
+                ifPresent(you -> System.out.println("Local Data =" + you.getName()));
 
         /*System.out.println("find Ajay = "+Data.stream().filter(name->name.getName().startsWith("ajay")&&name.getAge()>26)
                 .map(name->name.getName()).collect(Collectors.toList()));*/
@@ -41,7 +42,7 @@ public class ItreatrString {
         System.out.println("people More Than Age up 20 => " + output);
 
         printPeople(" Sorting", Data.stream().
-                sorted(Comparator.comparing(Person::getName))
+                sorted(Comparator.comparing(Person::getAge))
                 .collect(toList()));
 
     }
@@ -110,6 +111,8 @@ class Mapping {
         if (watchKey != null) {
             watchKey.pollEvents().stream().forEach(watchEvent -> System.out.println(watchEvent.context()));
         }
+
+
     }
 
 
