@@ -19,6 +19,10 @@ public class Person {
     public int ageDifference(Person other){
         return age-other.age;
     }
+    public Person findByName(Person other)
+    {
+        return (Person) name.chars().sorted();
+    }
 
     @Override
     public String toString() {
