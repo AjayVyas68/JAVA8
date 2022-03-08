@@ -18,7 +18,7 @@ public class Constructor {
         this.color=color;
     }
 
-    public static void main(String[] args) {
+    public static void helo(String[] args) {
       Constructor v = new Constructor("bmw","black");
         System.out.println(v.color);
         System.out.println(v.name);
